@@ -30,8 +30,8 @@ header{
   justify-content: space-between;
   padding: 10px 10px;
   align-items: center;
-  position: sticky;
-  top: 0px;
+  /* position: sticky;
+  top: 0px; */
 }
 
 header nav ul{
@@ -42,4 +42,25 @@ header nav ul{
 picture img, picture source{
   height: 100%;
   max-inline-size: 100%;
+}
+
+div.outline{
+  text-align: center;
+}
+
+div.outline h2{
+  margin-top: 10px;
+}
+
+div.outline p{
+  min-width: 300px;
+  max-width: 600px;
+  margin: 10px;
+  line-height: calc(15px + 1vh);
+}
+
+strong{
+  display: block;
+  text-align: end;
+  margin: 25px 10px 10px 0;
 }
