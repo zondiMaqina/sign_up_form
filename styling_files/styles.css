@@ -30,9 +30,16 @@ header{
   justify-content: space-between;
   padding: 10px 10px;
   align-items: center;
+  position: sticky;
+  top: 0px;
 }
 
 header nav ul{
   display: flex;
   column-gap: calc(10px + 1vw);
+}
+
+picture img, picture source{
+  height: 100%;
+  max-inline-size: 100%;
 }
