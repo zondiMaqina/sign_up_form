@@ -12,14 +12,15 @@
     <nav>
       <ul>
         <li>Contact</li>
-        <li><a href="./README.md">>Credits</a></li>
+        <li><a href="./README.md">Credits</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <figure class="image">
-      <img src="./images/bg_images/" alt="wavy image">
-    </figure>
+    <picture>
+      <source media="(max-width: 600px)" srcset="./images/bg_images/potrait_wavy_bg.jpeg">
+      <img src="images/bg_images/wavy_bg.jpeg" alt="wavy background image">
+    </picture>
     <section class="right-content">
       <section class="introductory-text">
         <div class="outline">
@@ -33,26 +34,33 @@
       </section>  
       <form action="#" method="post">
         <div class="form-data">
-          <h3>Lets d this</h3>
+          <h3>Lets do this</h3>
           <p>
-            <input type="text" required placeholder="First Name">
-            <input type="text" required placeholder="Last Name">
+            <div class="user-names">
+              <img src="./images/icons_logos/user.png" alt="user icon">
+              <input type="text" required placeholder="First Name" name="user_first_name">
+            </div>
+            <input type="text" required placeholder="Last Name" name="user_last_name">
           </p>
 
           <p>
-            <input type="email" required>
-            <input type="text" maxlength="10">
+            <div class="user_email">
+              <img src="./images/icons_logos/email.png" alt="envelope icon">
+              <input type="email" required name="user_email" placeholder="Email">
+            </div>
+            <input type="text" maxlength="10" name="user_mobile_number" placeholder="Mobile Number">
           </p>
 
           <p>
-            <input type="password" minlength="5" required>
-            <input type="password" minlength="5" required>
+            <img src="./images/icons_logos/lock.png" alt="locker icon">
+            <input type="password" minlength="5" required name="user_password" placeholder="Password">
           </p>
+          <input type="password" minlength="5" required name="password_confirmation" placeholder="Confirm Password">
         </div>
         <div class="options">
           <button>Create Account</button>
           <strong>OR</strong>
-          <button><img src="./images/icons_logos/" alt="google logo"> Sign up with google</button>
+          <button><img src="./images/icons_logos/google.png" alt="google logo"> Sign up with google</button>
         </div>
       </form>
       <p>Already have an account? <a href="#">Log in</a></p>
