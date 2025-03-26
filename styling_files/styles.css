@@ -6,6 +6,7 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+  font-family: sans-serif;
 }
 
 /* 4 primary colors */
@@ -20,3 +21,18 @@
   --no-style: none;
 }
 
+body{
+  min-height: 100vh;
+}
+
+header{
+  display: var(--flex-type);
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+}
+
+header nav ul{
+  display: flex;
+  column-gap: calc(10px + 1vw);
+}
