@@ -34,6 +34,10 @@ header{
   top: 0px; */
 }
 
+header h1{
+  font-size: calc(18px + 1vw);
+}
+
 header nav ul{
   display: flex;
   column-gap: calc(10px + 1vw);
@@ -59,8 +63,103 @@ div.outline p{
   line-height: calc(15px + 1vh);
 }
 
-strong{
+section.introductory-text strong{
   display: block;
   text-align: end;
   margin: 25px 10px 10px 0;
+}
+
+.form-data{
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 20px;
+  padding: 15px 10px;
+}
+
+form div.form-data .item{
+  display: var(--flex-type);
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+div.form-data div div{
+  flex-grow: 1;
+  display: var(--flex-type);
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  column-gap: 5px;
+}
+
+div.form-data div div input{
+  width: 100%;
+  padding: 2px 3px;
+}
+
+div.form-data div input{
+  flex-grow: 1;
+  max-width: 400px;
+  width: 100%;
+  padding: 2px 3px;
+}
+
+form .options{
+  display: var(--flex-type);
+  flex-flow: column wrap;
+  column-gap: 10px;
+  padding: 5px;
+  align-items: center;
+  gap: 8px;
+}
+
+.options button{
+  width: 80%;
+  padding: 5px;
+}
+
+section.right-content p{
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (min-width: 650px) {
+  main{
+    display: var(--flex-type);
+    flex-direction: row;
+    height: 100%;
+  }
+
+  main > section{
+    flex-basis: 800px;
+  }
+
+  section.introductory-text .outline h2{
+    text-align: start;
+    margin: 0 15px;
+    font-size: calc(18px + 1vw);
+  }
+
+  section.introductory-text .outline p{
+    text-align: start;
+    margin-top: 15px;
+  }
+
+  section strong{
+    margin-top: 10px;
+  }
+
+  form div.form-data .item{
+    flex-flow: row;
+    align-items: start;
+  }
+
+  form .options{
+    flex-flow: row;
+  }
 }
