@@ -12,13 +12,28 @@
 /* 4 primary colors */
 
 :root{
-  --text-color: ;
-  --header-bg-color: ;
-  --main-bg-color: ;
-  --footer-bg-color: ;
-  --anchor-color: ;
+  --text-color: #CED4DA;
+  --header-bg-color: #343A40;
+  --main-bg-color: #212529;
+  --anchor-color: #F8F9FA;
   --flex-type: flex;
   --no-style: none;
+}
+
+a{
+  color: var(--anchor-color);
+}
+
+a:hover{
+  filter: opacity(0.5);
+}
+
+h1, h2, p, strong, h3, li{
+  color: var(--text-color);
+}
+
+ul li:hover{
+  font-weight: bold;
 }
 
 body{
@@ -30,8 +45,17 @@ header{
   justify-content: space-between;
   padding: 10px 10px;
   align-items: center;
-  /* position: sticky;
-  top: 0px; */
+  position: sticky;
+  top: 0px;
+  background-color: var(--header-bg-color);
+}
+
+section.right-content{
+  padding-bottom: 20px;
+}
+
+main{
+  background-color: var(--main-bg-color);
 }
 
 header h1{
@@ -73,7 +97,8 @@ section.introductory-text strong{
   display: flex;
   flex-flow: column nowrap;
   row-gap: 20px;
-  padding: 15px 10px;
+  padding: 15px 10px 30px 10px;
+  background-color: #343A40;
 }
 
 form div.form-data .item{
@@ -96,6 +121,9 @@ div.form-data div div{
 div.form-data div div input{
   width: 100%;
   padding: 2px 3px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid var(--main-bg-color);
 }
 
 div.form-data div input{
@@ -103,29 +131,60 @@ div.form-data div input{
   max-width: 400px;
   width: 100%;
   padding: 2px 3px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid var(--main-bg-color);
+}
+
+input:focus{
+  outline: none;
+}
+
+input:focus:invalid{
+  border-bottom: 1px solid red;
+}
+
+input:focus:valid{
+  border-bottom: 1px solid #588157;
 }
 
 form .options{
   display: var(--flex-type);
   flex-flow: column wrap;
   column-gap: 10px;
-  padding: 5px;
+  margin-top: 20px;
+  padding: 5px 15px;
   align-items: center;
   gap: 8px;
 }
 
 .options button{
   width: 80%;
-  padding: 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
+}
+
+.options button:hover{
+  filter: opacity(0.5);
+  cursor: pointer;
+}
+
+.options button:active{
+  filter: none;
 }
 
 section.right-content p{
   text-align: center;
+  margin-top: 10px;
 }
 
 footer{
   text-align: center;
   padding: 10px;
+  background-color: var(--header-bg-color);
 }
 
 @media screen and (min-width: 650px) {
@@ -136,12 +195,15 @@ footer{
   }
 
   main > section{
+    display: var(--flex-type);
+    flex-flow: column;
+    gap: 20px;
     flex-basis: 800px;
   }
 
   section.introductory-text .outline h2{
     text-align: start;
-    margin: 0 15px;
+    margin: 10px 15px;
     font-size: calc(18px + 1vw);
   }
 
@@ -161,5 +223,6 @@ footer{
 
   form .options{
     flex-flow: row;
+    margin-top: 20px;
   }
 }
